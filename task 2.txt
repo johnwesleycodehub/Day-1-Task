@@ -1,0 +1,23 @@
+Ojects and its internal representation in Javascript
+
+Objects are one of the fundamental data types and are used to store collections of key-value pairs in JavaScript.
+
+1. Syntax:
+Objects in JavaScript are defined using curly braces `{}` and consist of key-value pairs separated by commas.
+Keys are usually strings, and values can be of any data type, including other objects, functions, arrays, etc.
+
+2. Internal Representation:
+Internally, objects in JavaScript are implemented using hash tables or dictionaries.
+
+- Object keys are converted to strings if they are not already strings. Example, if you use a number as a key it will be 
+automatically converted to a string representation.
+- JavaScript engines use hashing algorithms to map keys to their corresponding values in the hash table. 
+This allows for fast access and retrieval of properties from objects.
+- You can access object properties using dot notation (`object.property`) or bracket notation (`object['property']`).
+
+3. Dynamic Nature: 
+One of the key features of JavaScript objects is their dynamic nature.
+You can add, modify, or delete properties from an object at runtime, which makes them flexible and 
+adaptable to changing requirements.
+
+4. Methods: Objects in JavaScript can also contain functions as properties, known as methods.

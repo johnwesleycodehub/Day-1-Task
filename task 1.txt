@@ -1,0 +1,33 @@
+Difference between HTTP1.1 vs HTTP2
+HTTP/1.1 and HTTP/2 are two versions of the Hypertext Transfer Protocol (HTTP) used for communication between clients and
+servers on the internet.
+The main differences between HTTP/1.1 and HTTP/2:
+
+1. Multiplexing:  
+   - HTTP/1.1: It can only handle one request at a time per TCP connection. This limitation can lead to head-of-line blocking issues,
+   where one slow request can delay others.
+   - HTTP/2: Supports multiplexing, allowing multiple requests and responses to be sent and received concurrently 
+   over a single TCP connection. This improves performance by reducing latency and optimising resource usage.
+
+2. Header Compression:
+   - HTTP/1.1: Headers are sent in plain text for each request and response, leading to overhead, especially for repeated requests.
+   - HTTP/2: Introduces header compression, which reduces overhead by compressing HTTP header fields. This results in more efficient
+   use of network bandwidth and faster transmission of data.
+
+3. Binary Protocol:
+   - HTTP/1.1: Uses plain text for data transmission.
+   - HTTP/2: Is a binary protocol, meaning that data is encoded in binary format for transmission. Binary encoding is more efficient
+   in terms of parsing and processing, leading to better performance.
+
+4. Server Push:
+   - HTTP/1.1: Does not support server push. The client needs to request each resource individually, even if they are needed for
+   rendering a page.
+   - HTTP/2: Supports server push, where the server can proactively send resources to the client before they are requested. 
+   This can improve page load times by reducing the number of round trips needed to fetch resources
+
+5. Stream Prioritization:   - HTTP/1.1: Does not provide mechanisms for stream prioritization. Requests are processed 
+in the order they are received.
+   - HTTP/2: Allows for stream prioritization, enabling the client to specify the priority of requests. 
+   This helps optimize resource allocation and improve overall performance, especially in scenarios with multiple concurrent requests.
+
+HTTP/2 was designed to address the limitations and performance of HTTP/1.1, leading to faster and more efficient web communication.
